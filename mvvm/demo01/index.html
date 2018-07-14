@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mvvm</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" v-model="name">
+        <h3 v-bind="name"></h3>
+        <input type="text" v-model="testData1">
+        <h3>{{ testData1 }}</h3>
+        <input type="text" v-model="testData2">
+        <h3>{{ testData2 }}</h3>
+    </div>
+
+    <script src="./index.js"></script>
+    <script>
+        window.onload = () => {
+            let app = new MyVue({
+                el: '#app',
+                data: {
+                    name: 'guagua',
+                    testData1: 'haha',
+                    testData2: 'xixi'
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
