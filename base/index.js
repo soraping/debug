@@ -22,15 +22,15 @@ Function.prototype.myCall = function(context, ...args) {
   console.log(args);
   // [Function: say]
   console.log(this);
-  context.say = this;
-  context.say(...args);
+  let __ = (context[this.name] = this);
+  __(...args);
 };
 
 Person.say.myCall(Person1, 12, "class1");
 
 Function.prototype.myApply = function(context, args) {
-  context.speak = this;
-  context.speak(args);
+  let __ = (context[this.name] = this);
+  __(args);
 };
 
 Person.speak.myApply(Person1, [20, "class2"]);
