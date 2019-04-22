@@ -89,6 +89,21 @@ function h(nodeName, attributes) {
   return p;
 }
 
-let v = h("div", { id: "foo", name: "bar" }, "Hello!");
+let HelloDOM = h(
+  "div",
+  {
+    id: "foo",
+    name: "bar"
+  },
+  "hello react"
+);
 
-console.log(v);
+let PageDOM = h(
+  "div",
+  null,
+  h("h1", null, "preact源码"),
+  h(HelloDOM, null),
+  h("span", { id: "footer" }, "前端进行时")
+);
+
+console.log(PageDOM);
