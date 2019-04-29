@@ -72,9 +72,14 @@ function doRender(props, state, context) {
   return this.constructor(props, context);
 }
 
-let inst = new Component({ name: "zhangsan" }, {});
-inst.constructor = Ctor;
-console.log(inst.constructor.name);
-inst.render = doRender;
+let inst = new Ctor({ name: "zhangsan" }, {});
 
-inst.render();
+Component.call(inst, { name: "zhangsan" }, {});
+
+console.log(inst.props);
+
+// inst.constructor = Ctor;
+// console.log(inst.constructor.name);
+// inst.render = doRender;
+
+// inst.render();
