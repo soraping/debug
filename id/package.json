@@ -1,0 +1,16 @@
+{
+  "name": "id",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  },
+  "scripts": {
+    "start": "node build"
+  }
+}
