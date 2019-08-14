@@ -1,0 +1,16 @@
+{
+  "name": "debug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/soraping/debug.git",
+  "author": "soraping <soraping@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chance": "^1.0.5",
+    "@types/node": "^12.7.1",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "chance": "^1.0.18"
+  }
+}
